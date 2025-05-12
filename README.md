@@ -48,7 +48,7 @@ Make sure the following are installed:
 Start by cloning the codebase to your local machine:
 
 Cmd
-git clone https://github.com/shubh7856/fullstack-crud-app
+git clone https://github.com/shubh7856/fullstack-crud-app.git
 cd fullstack-crud-app
 
 
