@@ -1,0 +1,103 @@
+.container {
+    min-height: 100vh;
+    background-color: #ede9fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #aaa;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .backIcon {
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #000;
+    padding: 2px 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .buttonRow {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .primaryBtn, .outlineBtn {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  .primaryBtn {
+    background-color: #4338ca;
+    color: white;
+  }
+  
+  .outlineBtn {
+    border: 2px solid #4338ca;
+    color: #4338ca;
+  }
+  
+  .table {
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .row:first-child {
+    font-weight: bold;
+    background: #f3f4f6;
+    border-top: none;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .editBtn {
+    color: #2563eb;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .deleteBtn {
+    color: red;
+    font-weight: 500;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
