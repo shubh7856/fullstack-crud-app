@@ -1,15 +1,16 @@
-📘 Project Execution Guide (Frontend + Backend + MongoDB)
+# Project Execution Guide (Frontend + Backend + MongoDB)
 
 This document explains how to setup, run, and test the FullStack User Management App built using:
 
-Frontend: Next.js (React framework)
+* **Frontend:** Next.js (React framework)
+* **Backend:** Node.js with Express
+* **Database:** MongoDB
 
-Backend: Node.js with Express
+---
 
-Database: MongoDB
+## Folder Structure
 
-📁 Folder Structure
-
+```
 fullstack-crud-app/
 ├── backend/
 │   ├── src/
@@ -27,110 +28,135 @@ fullstack-crud-app/
 │   │   ├── services/       # Axios API handlers
 │   │   └── styles/         # CSS Modules
 │   └── package.json
+```
 
-⚙️ Prerequisites
+---
+
+## Prerequisites
 
 Make sure the following are installed:
 
-Node.js (v16+ preferred)
+* [Node.js](https://nodejs.org/) (v16+ preferred)
+* [MongoDB](https://www.mongodb.com/try/download/community)
 
-MongoDB
+---
 
-▶️ How to Run the Project
+## ▶How to Run the Project
 
-🔹 Step 1: Start MongoDB
+### Clone the Repository
 
-Make sure MongoDB is running locally on port 27017. You can start it using:
+Start by cloning the codebase to your local machine:
 
+Cmd
+git clone https://github.com/shubh7856/fullstack-crud-app
+cd fullstack-crud-app
+
+
+### Step 1: Start MongoDB
+
+Make sure MongoDB is running locally on port `27017`. You can start it using:
+
+Cmd:
 mongod
 
-MongoDB Compass can be used to visually inspect the database: https://www.mongodb.com/try/download/compass
+> MongoDB Compass can be used to visually inspect the database: [https://www.mongodb.com/try/download/compass](https://www.mongodb.com/try/download/compass)
 
-🔹 Step 2: Backend Setup
+### Step 2: Backend Setup (Dependencies + Run)
 
+Cmd:
 cd backend
 npm install
 
-Create .env file in /backend:
 
+Create `.env` file in `/backend`:
+
+Cmd:
 MONGO_URI=mongodb://localhost:27017/userdb
 PORT=5000
 
 Start backend server:
 
+Cmd:
 npm run dev
 
-The backend will run at http://localhost:5000
+> The backend will run at `http://localhost:5000`
 
-🔹 Backend Folder Summary
+#### Backend Folder Summary
 
-models/User.js – Mongoose schema for user
+* `models/User.js` – Mongoose schema for user
+* `routes/userRoutes.js` – All API endpoints
+* `controllers/userController.js` – Logic for CRUD
+* `config/db.js` – MongoDB connection setup
+* `server.js` – App entry point
 
-routes/userRoutes.js – All API endpoints
+---
 
-controllers/userController.js – Logic for CRUD
+### Step 3: Frontend Setup (Dependencies + Run)
 
-config/db.js – MongoDB connection setup
-
-server.js – App entry point
-
-🔹 Step 3: Frontend Setup
-
+Cmd:
 cd frontend
 npm install
 
+
 Start frontend:
 
+Cmd:
 npm run dev
 
-The frontend will run at http://localhost:3000
+> The frontend will run at `http://localhost:3000`
 
-🔹 Frontend Folder Summary
+#### Frontend Folder Summary
 
-pages/index.tsx – Landing page with buttons
+* `pages/index.tsx` – Landing page with buttons
+* `pages/add-user/` – Form page + confirm page
+* `pages/users/` – List view with cards
+* `components/` – UI components (UserForm, UserCard, ConfirmUser)
+* `services/userService.ts` – Axios HTTP requests
+* `styles/` – Custom CSS module files
 
-pages/add-user/ – Form page + confirm page
+---
 
-pages/users/ – List view with cards
+## Testing Instructions
 
-components/ – UI components (UserForm, UserCard, ConfirmUser)
+1. Go to [http://localhost:3000](http://localhost:3000)
+2. Click **Add User** → fill the form → Continue
+3. Review on confirmation screen → click **Done**
+4. Click **List View** → check card display
+5. Use **Edit** to update a user
+6. Use **Delete** to remove a user
+7. Try entering same email again → alert shown
 
-services/userService.ts – Axios HTTP requests
+---
 
-styles/ – Custom CSS module files
+## 🔍 Check Data in MongoDB
 
-✅ Testing Instructions
+### Using MongoDB Compass:
 
-Go to http://localhost:3000
+* Open Compass → Connect to `mongodb://localhost:27017`
+* Open `userdb` database → `users` collection
+* View inserted, updated, or deleted users
 
-Click Add User → fill the form → Continue
+---
 
-Review on confirmation screen → click Done
+## 💡 Notes
 
-Click List View → check card display
+* Make sure MongoDB is started before backend
+* Port conflicts? Change them in `.env` or scripts
+* Uses `sessionStorage` for transferring form data
+* Proper validation added (email, mobile, age, interest)
 
-Use Edit to update a user
+---
 
-Use Delete to remove a user
+## 👨‍💻 Author
 
-Try entering same email again → alert shown
+**Shubham Saraswat**
 
-🔍 Check Data in MongoDB
+* MERN Developer
+* [LinkedIn](https://www.linkedin.com/in/shubham-saraswat)
+* portfolio:(https://mysubhamportfolio.netlify.app/)
 
-Using MongoDB Compass:
+---
 
-Open Compass → Connect to mongodb://localhost:27017
+All three layers (Frontend + Backend + DB) work independently and together for a complete CRUD experience.
 
-Open userdb database → users collection
-
-View inserted, updated, or deleted users
-
-💡 Notes
-
-Make sure MongoDB is started before backend
-
-Port conflicts? Change them in .env or scripts
-
-Uses sessionStorage for transferring form data
-
-Proper validation added (email, mobile, age, interest)
+> Ready for interview demo, submission, and future deployment!
