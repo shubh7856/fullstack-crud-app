@@ -47,7 +47,8 @@ Make sure the following are installed:
 
 Start by cloning the codebase to your local machine:
 
-Cmd
+Cmd:
+
 git clone https://github.com/shubh7856/fullstack-crud-app.git
 cd fullstack-crud-app
 
@@ -57,6 +58,7 @@ cd fullstack-crud-app
 Make sure MongoDB is running locally on port `27017`. You can start it using:
 
 Cmd:
+
 mongod
 
 > MongoDB Compass can be used to visually inspect the database: [https://www.mongodb.com/try/download/compass](https://www.mongodb.com/try/download/compass)
@@ -64,6 +66,7 @@ mongod
 ### Step 2: Backend Setup (Dependencies + Run)
 
 Cmd:
+
 cd backend
 npm install
 
@@ -71,12 +74,14 @@ npm install
 Create `.env` file in `/backend`:
 
 Cmd:
+
 MONGO_URI=mongodb://localhost:27017/userdb
 PORT=5000
 
 Start backend server:
 
 Cmd:
+
 npm run dev
 
 > The backend will run at `http://localhost:5000`
@@ -94,6 +99,7 @@ npm run dev
 ### Step 3: Frontend Setup (Dependencies + Run)
 
 Cmd:
+
 cd frontend
 npm install
 
@@ -101,6 +107,7 @@ npm install
 Start frontend:
 
 Cmd:
+
 npm run dev
 
 > The frontend will run at `http://localhost:3000`
